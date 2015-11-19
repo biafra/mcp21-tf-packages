@@ -4,8 +4,9 @@ mcp21-tf-packages
 TinyFugue MOO Client Protocol MCP/2.1 packages
 
 Get the MCP/2.1 macros from [Ben Jackson](http://ben.com/MOO/tf-mcp.html).
-Unpack it in your `tf-lib`. With these macros you will get MCP (MOO Client
-Protocol) support from tf so you can interact with some moo packages.
+Unpack it in your `tf-lib`. I'm using `~/lib/tf/`. With these
+macros you will get MCP (MOO Client Protocol) support from tf so you can
+interact with some moo packages.
 One of the most important one is local editing (edit text in a separate
 window). Make sure your `/addworld` includes `-Ttiny.moo` on your MOO
 worlds.
@@ -34,4 +35,37 @@ worlds.
 > a rough indication of net-lag. An indicator shows up on the right side
 > of the worlds name on the visual bar. Of course you need /visual on.
 > This is just the client test for now.
+
+An example for the beginning of your `.tfrc`:
+
+    /require ~/tiny.world
+
+    /load ~/lib/tf/mcp-2/mcp21.tf
+    /load ~/lib/tf/mcp-2/mcp-negotiate.tf
+    /load ~/lib/tf/mcp-2/simpleedit.tf
+    /load ~/lib/tf/mcp-2/local-edit.tf
+    
+    /load ~/lib/tf/mcp21-tf-packages/mcp-client-info.tf
+    /load ~/lib/tf/mcp21-tf-packages/mcp-displayurl.tf
+    /load ~/lib/tf/mcp21-tf-packages/mcp-ping.tf
+    /load ~/lib/tf/mcp21-tf-packages/mcp-status.tf
+    /load ~/lib/tf/mcp21-tf-packages/mcp-msp.tf
+    
+    /visual on
+    
+    /mooping on
+
+After connecting with your character to a MCP/2.1 enabled MOO you can use
+the `@mcp` command to check the result of the packages negotiation.
+
+    @mcp
+    session: #3375
+    dns-com-awns-displayurl (#11112) 1.0
+    dns-com-awns-ping (#12212) 1.0
+    dns-com-awns-status (#12112) 1.0
+    dns-com-vmoo-client (#12122) 1.0
+    dns-com-zuggsoft-msp (#12021) 1.0
+    dns-org-mud-moo-simpleedit (#2212) 1.0
+    mcp-negotiate (#1212) 2.0
+    ---
 

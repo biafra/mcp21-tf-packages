@@ -4,6 +4,8 @@
 ; Depends on MCP/2.1 macros - load this after them
 ; Copyright (c) 2006 biafra a t MOOsaico
 ; This is free software
+;
+; Limited. Doesn't implement all features
 ; 0.5 work in v4
 ; 0.4 sound ok
 
