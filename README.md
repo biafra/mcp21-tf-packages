@@ -27,7 +27,7 @@ worlds.
 >
 > The package allows the server to send URLs to the client. The client
 > should then use a client-side webbrowser to display the contents of the
-> URL. You have to edit it and write your browser name.
+> URL. It uses the default browser. You may force it with $BROWSER
 
 > **dns-com-awns-ping**
 >
@@ -35,6 +35,13 @@ worlds.
 > a rough indication of net-lag. An indicator shows up on the right side
 > of the worlds name on the visual bar. Of course you need /visual on.
 > This is just the client test for now.
+
+> **dns-com-zuggsoft-msp**
+>
+> MUD Sound Protocol (MSP) in MCP/2.1. Really rudimentar.
+> No telnet option negotiation.
+> It just works! Implements basic !!SOUND as it plays .wav files
+
 
 An example for the beginning of your `.tfrc`:
 
@@ -54,6 +61,7 @@ An example for the beginning of your `.tfrc`:
     /visual on
     
     /mooping on
+    /displayurl on
 
 After connecting with your character to a MCP/2.1 enabled MOO you can use
 the `@mcp` command to check the result of the packages negotiation.
