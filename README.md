@@ -11,6 +11,9 @@ One of the most important one is local editing (edit text in a separate
 window). Make sure your `/addworld` includes `-Ttiny.moo` on your MOO
 worlds.
 
+**UPDATE** Please get the MCP base macros from [here](https://github.com/biafra/mcp-2/)
+which are updated to work with servers after 2.8.2
+
 > **dns-com-vmoo-client**
 >
 > Implements some client info to be known within the MOO. Name,
